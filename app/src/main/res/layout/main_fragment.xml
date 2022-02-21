@@ -21,33 +21,37 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.google.mlkit.showcase.translate.main.MainFragment">
+    tools:context=".main.MainFragment">
 
-    <androidx.camera.view.PreviewView
-        android:id="@+id/viewfinder"
+
+    <!--    android:background="@drawable/ic_rectagle_box"-->
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="60dp"
+        android:layout_margin="20dp"
+        android:gravity="center"
+        android:orientation="vertical"
         app:layout_constraintBottom_toTopOf="@id/middle"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
+        <!--        app:layout_constraintBottom_toBottomOf="@id/viewfinder"-->
+        <!--        app:layout_constraintEnd_toEndOf="@id/viewfinder"-->
+        <!--        app:layout_constraintStart_toStartOf="@id/viewfinder"-->
+        <!--        app:layout_constraintTop_toTopOf="@id/viewfinder"-->
 
-    <androidx.appcompat.widget.LinearLayoutCompat
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        android:background="@drawable/ic_rectagle_box"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="@id/viewfinder"
-        app:layout_constraintEnd_toEndOf="@id/viewfinder"
-        app:layout_constraintStart_toStartOf="@id/viewfinder"
-        app:layout_constraintTop_toTopOf="@id/viewfinder">
+        <androidx.camera.view.PreviewView
+            android:id="@+id/viewfinder"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true" />
 
         <SurfaceView
             android:id="@+id/overlay"
             android:layout_width="match_parent"
-            android:layout_height="100dp" />
-    </androidx.appcompat.widget.LinearLayoutCompat>
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true" />
+    </RelativeLayout>
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/middle"

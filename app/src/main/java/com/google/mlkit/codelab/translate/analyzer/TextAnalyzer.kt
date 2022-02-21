@@ -76,7 +76,7 @@ class TextAnalyzer(
             val originalHeightCropPercentage = currentCropPercentages.first
             val originalWidthCropPercentage = currentCropPercentages.second
             imageCropPercentages.value =
-                Pair(originalHeightCropPercentage / 2, originalWidthCropPercentage)
+                Pair(originalHeightCropPercentage / 4, originalWidthCropPercentage)
         }
 
         // If the image is rotated by 90 (or 270) degrees, swap height and width when calculating
